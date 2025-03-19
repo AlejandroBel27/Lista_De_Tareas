@@ -1,4 +1,4 @@
-# 📝 Asignación landingpage  
+# 📝 Asignación Lista de tareas  
 ## 👤 Rubén Alejandro Saldaña Beltrán
 ### 🌐 Aplicaciones Web  
 ### 👤 Maestro: MARIO OSVALDO PARRA ESPINOZA 
