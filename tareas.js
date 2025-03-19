@@ -1,4 +1,41 @@
 
+
+let formulario = document.getElementById("form");
+
+formulario.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    let automovil = {
+        modelo: document.getElementById("modelo").value,
+        anio: document.getElementById("anio").value,
+        marca: document.getElementById("marca").value,
+        serie: document.getElementById("serie").value
+    };
+
+    agregarTabla(automovil);
+
+    e.target.reset("");
+
+});
+
+function agregarTabla(automovil) {
+    let cuerpo_tabla = document.getElementById("cuerpo_tabla");
+
+    let fila = document.createElement("tr");
+
+    for (let key in automovil){
+        let campo = document.createElement("td");
+
+        campo.textContent = automovil[key];
+        fila.appendChild(campo);
+    }
+
+    cuerpo_tabla.appendChild(fila);
+}
+
+
+
+/*
 const boton = document.getElementById("agregar");
 
 let tareas = [];
@@ -50,4 +87,4 @@ function agregarTarea() {
 
         campo.value="";
     }
-}
+}*/
