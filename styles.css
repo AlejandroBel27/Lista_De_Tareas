@@ -35,3 +35,146 @@ h1 {
     font-size: 70px;
     text-shadow: 1px 1px 8px #d6d6d6;
 }
+
+.btn-eliminar {
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+    padding: 0.7em 2em;
+    border: 3px solid #FF0072;
+    border-radius: 2px;
+    position: relative;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+    color: #FF0072;
+    text-decoration: none;
+    transition: 0.3s ease all;
+    z-index: 1;
+}
+
+.btn-eliminar:before {
+    transition: 0.5s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: '';
+    background-color: #FF0072;
+    z-index: -1;
+}
+
+.btn-eliminar:hover {
+    color: white;
+}
+
+.btn-eliminar:hover:before,
+.btn-eliminar:focus:before {
+    transition: 0.5s all ease;
+    left: 0;
+    right: 0;
+    opacity: 1;
+}
+
+.btn-eliminar:active {
+    transform: scale(0.9);
+}
+
+.btn-actualizar {
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+    padding: 0.7em 2em;
+    border: 3px solid #0084ff;
+    border-radius: 2px;
+    position: relative;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+    color: #0084ff;
+    text-decoration: none;
+    transition: 0.3s ease all;
+    z-index: 1;
+}
+
+.btn-actualizar:before {
+    transition: 0.5s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: '';
+    background-color: #0084ff;
+    z-index: -1;
+}
+
+.btn-actualizar:hover,
+.btn-actualizar:focus {
+    color: white;
+}
+
+.btn-actualizar:hover:before,
+.btn-actualizar:focus:before {
+    transition: 0.5s all ease;
+    left: 0;
+    right: 0;
+    opacity: 1;
+}
+
+.btn-actualizar:active {
+    transform: scale(0.9);
+}
+
+.btnagregar {
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+    padding: 0.7em 2em;
+    border: 3px solid #0084ff;
+    border-radius: 2px;
+    position: relative;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+    color: #0084ff;
+    text-decoration: none;
+    transition: 0.3s ease all;
+    z-index: 1;
+}
+
+.btnagregar:before {
+    transition: 0.5s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: '';
+    background-color: #0084ff;
+    z-index: -1;
+}
+
+.btnagregar:hover,
+.btnagregar:focus {
+    color: white;
+}
+
+.btnagregar:hover:before,
+.btnagregar:focus:before {
+    transition: 0.5s all ease;
+    left: 0;
+    right: 0;
+    opacity: 1;
+}
+
+.btnagregar:active {
+    transform: scale(0.9);
+}

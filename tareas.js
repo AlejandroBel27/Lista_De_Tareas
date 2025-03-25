@@ -2,9 +2,8 @@
 
 let formulario = document.getElementById("form");
 
-formulario.addEventListener("submit", function (e) {
+formulario.addEventListener("submit", function (e){
     e.preventDefault();
-
     let automovil = {
         modelo: document.getElementById("modelo").value,
         anio: document.getElementById("anio").value,
@@ -25,12 +24,52 @@ function agregarTabla(automovil) {
 
     for (let key in automovil){
         let campo = document.createElement("td");
-
         campo.textContent = automovil[key];
         fila.appendChild(campo);
     }
 
+    let eliminarCelda = document.createElement("td");
+    let btnEliminar = document.createElement("button");
+    btnEliminar.textContent= "Eliminar";
+    btnEliminar.classList.add("btn-eliminar");
+    btnEliminar.addEventListener("click",function(){
+        fila.remove();
+    });
+    eliminarCelda.appendChild(btnEliminar);
+    fila.appendChild(eliminarCelda);
+
+    let actualizarCelda = document.createElement("td");
+    let btnActualizar = document.createElement("button");
+    btnActualizar.textContent = "Actualizar";
+    btnActualizar.classList.add("btn-actualizar");
+    btnActualizar.addEventListener("click", function () {
+        actualizarFila(fila, automovil);
+    });
+    actualizarCelda.appendChild(btnActualizar);
+    fila.appendChild(actualizarCelda);
+
     cuerpo_tabla.appendChild(fila);
+
+    function actualizarFila(fila, automovil) {
+        let nuevoModelo = prompt("Nuevo modelo:", automovil.modelo);
+        let nuevoAnio = prompt("Nuevo año:", automovil.anio);
+        let nuevaMarca = prompt("Nueva marca:", automovil.marca);
+        let nuevaSerie = prompt("Nueva serie:", automovil.serie);
+    
+        if (nuevoModelo && nuevoAnio && nuevaMarca && nuevaSerie) {
+            automovil.modelo = nuevoModelo;
+            automovil.anio = nuevoAnio;
+            automovil.marca = nuevaMarca;
+            automovil.serie = nuevaSerie;
+    
+            
+            let celdas = fila.getElementsByTagName("td");
+            celdas[0].textContent = automovil.modelo;
+            celdas[1].textContent = automovil.anio;
+            celdas[2].textContent = automovil.marca;
+            celdas[3].textContent = automovil.serie;
+        }
+    }
 }
 
 
